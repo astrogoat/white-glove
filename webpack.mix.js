@@ -12,14 +12,14 @@ const mix = require('laravel-mix');
  | -----------------------------------------------
  | HOW TO USE IN YOUR STRATA CONSUMING APPLICATION
  | -----------------------------------------------
- | Using your view with mix('css/skeleton.css', 'vendor/skeleton')
+ | Using your view with mix('css/white-glove.css', 'vendor/white-glove')
  | Be sure to publish your assets first, see docs for more information
  | https://docs.3zbrands.dev/strata/index/assets-and-resources#publishing-your-assets
  |
  */
 
 // mix
-    // .postCss('resources/css/skeleton.css', 'css', [require('tailwindcss')('tailwind.config.js')])
-    // .js('resources/js/skeleton.js', 'js')
+    // .postCss('resources/css/white-glove.css', 'css', [require('tailwindcss')('tailwind.config.js')])
+    // .js('resources/js/white-glove.js', 'js')
     // .version()
     // .setPublicPath('public/')
