@@ -2,10 +2,10 @@
 
 namespace Astrogoat\WhiteGlove;
 
+use Astrogoat\WhiteGlove\Settings\WhiteGloveSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
 use Spatie\LaravelPackageTools\Package;
-use Astrogoat\WhiteGlove\Settings\WhiteGloveSettings;
 
 class WhiteGloveServiceProvider extends AppPackageServiceProvider
 {

@@ -2,9 +2,9 @@
 
 namespace Astrogoat\WhiteGlove\Tests;
 
+use Astrogoat\WhiteGlove\WhiteGloveServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\WhiteGlove\WhiteGloveServiceProvider;
 
 class TestCase extends Orchestra
 {
