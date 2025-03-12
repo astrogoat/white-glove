@@ -2,9 +2,14 @@
 
 namespace Astrogoat\WhiteGlove;
 
+use Astrogoat\WhiteGlove\Peripherals\Icon;
+use Astrogoat\WhiteGlove\Peripherals\Modal;
+use Astrogoat\WhiteGlove\Settings\Details;
+use Astrogoat\WhiteGlove\Settings\ValueProps;
 use Astrogoat\WhiteGlove\Settings\WhiteGloveSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 
 class WhiteGloveServiceProvider extends AppPackageServiceProvider
@@ -26,4 +31,12 @@ class WhiteGloveServiceProvider extends AppPackageServiceProvider
     {
         $package->name('white-glove')->hasConfigFile()->hasViews();
     }
+
+    public function bootingPackage(): void
+    {
+        Livewire::component('astrogoat.white-glove.settings.details', Details::class);
+        Livewire::component('astrogoat.white-glove.peripherals.modal', Modal::class);
+        Livewire::component('astrogoat.white-glove.peripherals.icon', Icon::class);
+    }
+
 }
