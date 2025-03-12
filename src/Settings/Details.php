@@ -48,7 +48,7 @@ class Details extends SettingsCast
         return $details;
     }
 
-  public function set($details)
+    public function set($details)
     {
         return $details;
     }

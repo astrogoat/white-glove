@@ -21,7 +21,7 @@ class Modal extends Peripheral
             ? [
                 'show_modal' => false,
                 'label' => 'Learn more',
-                'content' => ''
+                'content' => '',
             ]
             : $settings->modal;
     }
