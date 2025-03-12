@@ -8,17 +8,17 @@ use Helix\Lego\Settings\AppSettings;
 
 class WhiteGloveSettings extends AppSettings
 {
-     public string $title;
+    public string $title;
 
-     public $details;
+    public $details;
 
-     public $icon;
-     public $modal;
+    public $icon;
+    public $modal;
 
-     protected array $peripherals = [
-         Icon::class,
-         Modal::class
-     ];
+    protected array $peripherals = [
+        Icon::class,
+        Modal::class,
+    ];
 
     public function rules(): array
     {
@@ -42,7 +42,7 @@ class WhiteGloveSettings extends AppSettings
         return 'white-glove';
     }
 
-    public function sections() : array
+    public function sections(): array
     {
         return [
             [
@@ -56,7 +56,7 @@ class WhiteGloveSettings extends AppSettings
         ];
     }
 
-    public function help():array
+    public function help(): array
     {
         return [
             'title' => 'This is the title to be displayed on the WhiteGlove widget. Leave blank to use the default title: "White Glove Delivery".',
