@@ -16,6 +16,7 @@ class WhiteGloveSettings extends AppSettings
     public $modal;
 
     protected array $peripherals = [
+        Details::class,
         Icon::class,
         Modal::class,
     ];
@@ -23,13 +24,6 @@ class WhiteGloveSettings extends AppSettings
     public function rules(): array
     {
         return [];
-    }
-
-    public static function casts(): array
-    {
-        return [
-            'details' => Details::class,
-        ];
     }
 
     public function description(): string
@@ -48,10 +42,6 @@ class WhiteGloveSettings extends AppSettings
             [
                 'title' => 'Title',
                 'properties' => ['title'],
-            ],
-            [
-                'title' => 'Details (Value props)',
-                'properties' => ['details'],
             ],
         ];
     }
