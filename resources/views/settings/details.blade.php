@@ -1,7 +1,12 @@
 <div
-    class="grid gap-6"
+    class="grid gap-6 bg-white shadow sm:rounded-md"
 >
-    <div class="sm:flex-auto">
+    <div class="bg-gray-100 dark:bg-slate-700 px-6 py-2 text-left flex justify-between border-b">
+        <h1 class="
+        text-xs font-medium leading-6 text-gray-700 dark:text-slate-200 uppercase tracking-wider
+        ">Details (Value props)</h1>
+    </div>
+    <div class="sm:flex-auto px-6">
         <p class="text-sm text-gray-700">
             Details (value props) to display on the White Glove ZipCode Checker widget in the BuyBox.
         </p>
@@ -37,6 +42,8 @@
                 >
                     Add value prop
                 </x-fab::elements.button>
+
+                <x-fab::elements.button primary wire:click="save">Save</x-fab::elements.button>
             </div>
         </div>
     </div>
