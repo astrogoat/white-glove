@@ -2,6 +2,7 @@
 
 namespace Astrogoat\WhiteGlove\Peripherals;
 
+use Astrogoat\WhiteGlove\Settings\WhiteGloveSettings;
 use Helix\Fabrick\Notification;
 use Helix\Lego\Http\Livewire\Traits\InteractsWithTopBar;
 use Helix\Lego\Settings\AppSettings;
@@ -28,12 +29,13 @@ class Modal extends Peripheral
 
     public function save()
     {
-        $this->settings->modal = $this->modal;
-        $this->settings->save();
+
+        $settings = app(WhiteGloveSettings::class);
+        $settings->modal = $this->modal;
+        $settings->save();
 
         $this->notify(Notification::success('Saved', 'Modal settings have been saved.')->autoDismiss(2500));
         $this->markAsClean();
-
     }
 
     public function render()

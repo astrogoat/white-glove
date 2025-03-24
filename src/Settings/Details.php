@@ -2,11 +2,12 @@
 
 namespace Astrogoat\WhiteGlove\Settings;
 
-use Helix\Lego\Apps\Contracts\SettingsCast;
+use Helix\Fabrick\Notification;
 use Helix\Lego\Http\Livewire\Traits\InteractsWithTopBar;
 use Helix\Lego\Settings\AppSettings;
+use Helix\Lego\Settings\Peripherals\Peripheral;
 
-class Details extends SettingsCast
+class Details extends Peripheral
 {
     use InteractsWithTopBar;
 
@@ -38,18 +39,18 @@ class Details extends SettingsCast
         $this->markAsDirty();
     }
 
+    public function save()
+    {
+        $settings = app(WhiteGloveSettings::class);
+        $settings->details = $this->details;
+        $settings->save();
+
+        $this->notify(Notification::success('Saved', 'Details settings have been saved.')->autoDismiss(2500));
+        $this->markAsClean();
+    }
+
     public function render()
     {
         return view('white-glove::settings.details');
-    }
-
-    public function get($details)
-    {
-        return $details;
-    }
-
-    public function set($details)
-    {
-        return $details;
     }
 }
