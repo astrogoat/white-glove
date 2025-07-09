@@ -45,6 +45,7 @@ jobs:
         run: |
           git add -A public
           git add -A package-lock.json
+          git add -A mix-manifest.json
           git commit -m "Build assets"
           git push origin ${{ github.ref_name }}
 
