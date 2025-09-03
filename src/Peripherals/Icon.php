@@ -61,6 +61,6 @@ class Icon extends Peripheral
 
     public function addMedia($key, $provider, array $assets)
     {
-        $this->icon = $assets[0]['url'];
+        $this->icon = $assets[0]['secure_url'];
     }
 }
